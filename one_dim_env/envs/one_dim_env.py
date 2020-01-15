@@ -13,13 +13,13 @@ class OneDimEnv(gym.Env):
     def step(self, a):
         a = min(max(float(np.asarray(a)), self.min_action), self.max_action)
         self.state += a
-        reward = np.exp(-np.square(self.state))
+        reward = -np.square(self.state)
         self.episode_length += 1
         done = self.episode_length >= self.max_episode_length
-        return self.state, reward, done, {}
+        return self.state, float(reward), done, {}
 
     def reset(self):
-        self.state = np.random.uniform(low=-1, high=1, size=(1,))
+        self.state = np.random.uniform(low=-5, high=5, size=(1,))
         self.episode_length = 0
         return self.state
 
