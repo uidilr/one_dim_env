@@ -14,7 +14,7 @@ Environments are already registered to gym if it is correctly set up.
 ```
 import gym
 
-env = gym.make("irl_gym:OneDim-v0")
+env = gym.make("one_dim_env:OneDim-v0")
 ```
 
 ## License
