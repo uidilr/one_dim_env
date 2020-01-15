@@ -19,7 +19,7 @@ class OneDimEnv(gym.Env):
         return self.state, reward, done, {}
 
     def reset(self):
-        self.state = np.random.uniform(low=-1, high=1)
+        self.state = np.random.uniform(low=-1, high=1, size=(1,))
         self.episode_length = 0
         return self.state
 
