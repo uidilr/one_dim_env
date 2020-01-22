@@ -31,6 +31,8 @@ if __name__ == "__main__":
     for _ in range(n_episode):
         done = False
         s = env.reset()
+        print(s.shape)
         while not done:
             s, reward, done, _ = env.step(np.asarray([0.01,0.01]))
+            print(s.shape)
             print(s, reward, done)

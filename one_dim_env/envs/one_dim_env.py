@@ -24,6 +24,12 @@ class OneDimEnv(gym.Env):
         return self.state
 
 
+class OneDimPosEnv(OneDimEnv):
+    def reset(self):
+        self.state = np.random.uniform(low=0, high=5, size=(1,))
+        self.episode_length = 0
+        return self.state
+
 if __name__ == "__main__":
     env = OneDimEnv()
 
