@@ -8,5 +8,5 @@ register(
 
 register(
     id='TwoDim-v0',
-    entry_point='two_dim_env.envs:TwoDimEnv',
+    entry_point='one_dim_env.envs:TwoDimEnv',
 )
